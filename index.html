@@ -22,6 +22,12 @@
         <button id="A" type="button" class="btn btn-primary mt-5">Primary</button>
         <button id="B" type="button" class="btn btn-primary mt-5">Primary</button>
     </article>
+    <article class="result">
+        <img id="img" class="mt-5" src="nozomi.png" alt="member">
+        <h2 id="member" class="text-center mt-5">멤버이름</h2>
+        <h3 id="explain" class="text-center mt-5">설명</h3>
+        <div class="share addthis_inline_share_toolbox"></div>
+    </article>
     <input type="hidden" id="EI" value="0">
     <input type="hidden" id="SN" value="0">
     <input type="hidden" id="TF" value="0">
@@ -32,9 +38,23 @@
         var num = 1;
         var q = {
             1: {"title": "문제 1번", "type": "EI", "A": "E", "B": "I"},
-            2: {"title": "문제 2번", "type": "SN", "A": "S", "B": "N"},
-            3: {"title": "문제 3번", "type": "TF", "A": "T", "B": "F"}
+            2: {"title": "문제 2번", "type": "EI", "A": "E", "B": "I"},
+            3: {"title": "문제 3번", "type": "EI", "A": "E", "B": "I"},
+            4: {"title": "문제 4번", "type": "SN", "A": "S", "B": "N"},
+            5: {"title": "문제 5번", "type": "SN", "A": "S", "B": "N"},
+            6: {"title": "문제 6번", "type": "SN", "A": "S", "B": "N"},
+            7: {"title": "문제 7번", "type": "TF", "A": "T", "B": "F"},
+            8: {"title": "문제 8번", "type": "TF", "A": "T", "B": "F"},
+            9: {"title": "문제 9번", "type": "TF", "A": "T", "B": "F"},
+            10: {"title": "문제 10번", "type": "JP", "A": "J", "B": "P"},
+            11: {"title": "문제 11번", "type": "JP", "A": "J", "B": "P"},
+            12: {"title": "문제 12번", "type": "JP", "A": "J", "B": "P"}
         }
+        var result = {
+            "INTP": {"member": "노조미", "explain": "설명", "img": "nozomi.png"},
+            "INTJ": {"member": "에리", "explain": "설명", "img": "nozomi.png"},
+            "INFP": {"member": "니코", "explain": "설명", "img": "nozomi.png"}
+        } 
         function start() {
             $(".start").hide();
             $(".question").show();
@@ -50,13 +70,28 @@
             next();
         })
         function next() {
-            $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
-            $("#title").html(q[num]["title"]);
-            $("#type").val(q[num]["type"]);
-            $("#A").html(q[num]["A"]);
-            $("#B").html(q[num]["B"]);
-            num++;
+            if (num == 13) {
+                $(".question").hide();
+                $(".result").show();
+                var mbti = "";
+                ($("#EI").val() < 2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val() < 2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val() < 2) ? mbti+="F" : mbti+="T";
+                ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
+                $("#img").attr("src", result[mbti]["img"]);
+                $("#member").html(result[mbti]["member"]);
+                $("#explain").html(result[mbti]["explain"]);
+            } else {
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
         }
     </script>
+    <script data-ad-client="ca-pub-9005571517151133" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-605d2b3a43f42fe3"></script>
 </body>
 </html>
