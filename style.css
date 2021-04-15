@@ -20,3 +20,8 @@ article {
 .share {
     margin: 0 auto;
 }
+
+#start {
+    height: 100px;
+    font-size: large;
+}
