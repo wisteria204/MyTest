@@ -3,6 +3,23 @@ article {
     flex-direction: column;
 }
 
+#titleImg {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+#start {
+    height: 60px;
+    font-size: large;
+}
+
+#resultImg {
+    width: 30%;
+    height: 30%;
+    margin: 0 auto;
+}
+
 .question {
     display: none;
 }
@@ -11,17 +28,6 @@ article {
     display: none;
 }
 
-#img {
-    width: 30%;
-    height: 30%;
-    margin: 0 auto;
-}
-
 .share {
     margin: 0 auto;
-}
-
-#start {
-    height: 100px;
-    font-size: large;
 }
