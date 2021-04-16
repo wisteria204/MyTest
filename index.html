@@ -18,86 +18,111 @@
     </article>
     <article class="question">
         <div class="progress mt-5">
-            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: calc(100/9*1%)"></div>
         </div>
         <h2 id="title" class="text-center mt-5">문제</h2>
-        <input id="type" type="hidden" value="EI">
-        <button id="A" type="button" class="btn btn-primary mt-5">Primary</button>
-        <button id="B" type="button" class="btn btn-primary mt-5">Primary</button>
+        <input id="selectA" type="hidden" value="A">
+        <input id="selectB" type="hidden" value="B">
+        <button id="btnA" type="button" class="btn btn-primary mt-5">Primary</button>
+        <button id="btnB" type="button" class="btn btn-primary mt-5">Primary</button>
     </article>
     <article class="result">
-        <h2 class="text-center mt-5">나와 닮은 뮤즈 멤버</h2>
+        <h2 class="text-center mt-5">나와 닮은 러브라이브 1, 2회 우승 멤버</h2>
         <img id="resultImg" class="mt-5" src="nozomi.png" alt="member">
         <h2 id="member" class="text-center mt-5">멤버이름</h2>
         <h3 id="explain" class="text-center mt-5">설명</h3>
         <div class="share addthis_inline_share_toolbox mt-5"></div>
         <h6 class="text-center mt-5">ⓒ 2021. wisteria204 all rights reserved.</h6>
     </article>
-    <input type="hidden" id="ABC" value="0">
-    <input type="hidden" id="DEF" value="0">
+    <input type="hidden" id="A" value="0">
+    <input type="hidden" id="B" value="0">
+    <input type="hidden" id="C" value="0">
+    <input type="hidden" id="D" value="0">
+    <input type="hidden" id="E" value="0">
+    <input type="hidden" id="F" value="0">
+    <input type="hidden" id="G" value="0">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script>
         var num = 1;
         var q = {
-            1: {"title": "문제 1번", "type": "ABC", "C": "A", "B": "B", "A": "C"}
+            1: {"title": "문제 1번", "A": "1선택지", "B": "2선택지", "selA": "A", "selB": "B"},
+            2: {"title": "문제 2번", "A": "2선택지", "B": "2선택지", "selA": "B", "selB": "A"},
+            3: {"title": "문제 3번", "A": "3선택지", "B": "2선택지", "selA": "A", "selB": "B"},
+            4: {"title": "문제 4번", "A": "4선택지", "B": "2선택지", "selA": "C", "selB": "D"},
+            5: {"title": "문제 5번", "A": "5선택지", "B": "2선택지", "selA": "E", "selB": "C"},
+            6: {"title": "문제 6번", "A": "6선택지", "B": "2선택지", "selA": "C", "selB": "D"},
+            7: {"title": "문제 7번", "A": "7선택지", "B": "2선택지", "selA": "F", "selB": "G"},
+            8: {"title": "문제 8번", "A": "8선택지", "B": "2선택지", "selA": "G", "selB": "F"},
+            9: {"title": "문제 9번", "A": "9선택지", "B": "2선택지", "selA": "F", "selB": "G"}
         }
         var result = {
-            "ISTJ": {"member": "소노다 우미", "explain": "설명", "img": "umi.png"},
-            "ISFJ": {"member": "니시키노 마키", "explain": "설명", "img": "maki.png"},
-            "ISTP": {"member": "코우사카 유키호", "explain": "설명", "img": "yukiho.png"},
-            "ISFP": {"member": "코이즈미 하나요", "explain": "설명", "img": "hanayo.png"},
-            "INFJ": {"member": "토죠 노조미", "explain": "설명", "img": "nozomi.png"},
-            "INTJ": {"member": "토도 에레나", "explain": "설명", "img": "erena.png"},
-            "INFP": {"member": "미나미 코토리", "explain": "설명", "img": "kotori.png"},
-            "INTP": {"member": "오토노키자카 이사장", "explain": "설명", "img": "rizityo.png"},
-            "ESTJ": {"member": "아야세 에리", "explain": "설명", "img": "eri.png"},
-            "ESFJ": {"member": "유우키 안쥬", "explain": "설명", "img": "anzyu.png"},
-            "ESTP": {"member": "야자와 니코", "explain": "설명", "img": "nico.png"},
-            "ESFP": {"member": "호시조라 린", "explain": "설명", "img": "rin.png"},
-            "ENFJ": {"member": "아야세 아리사", "explain": "설명", "img": "arisa.png"},
-            "ENTJ": {"member": "키라 츠바사", "explain": "설명", "img": "tsubasa.png"},
-            "ENFP": {"member": "코우사카 호노카", "explain": "설명", "img": "honoka.png"},
-            "ENTP": {"member": "야자와 니코", "explain": "설명", "img": "nico.png"}
+            "ACF": {"member": "소노다 우미", "explain": "설명", "img": "umi.png"},
+            "ACG": {"member": "니시키노 마키", "explain": "설명", "img": "maki.png"},
+            "ADF": {"member": "야자와 니코", "explain": "설명", "img": "nico.png"},
+            "ADG": {"member": "코이즈미 하나요", "explain": "설명", "img": "hanayo.png"},
+            "AEF": {"member": "토죠 노조미", "explain": "설명", "img": "nozomi.png"},
+            "AEG": {"member": "토도 에레나", "explain": "설명", "img": "erena.png"},
+            "BCF": {"member": "미나미 코토리", "explain": "설명", "img": "kotori.png"},
+            "BCG": {"member": "코우사카 호노카", "explain": "설명", "img": "honoka.png"},
+            "BDF": {"member": "아야세 에리", "explain": "설명", "img": "eri.png"},
+            "BDG": {"member": "유우키 안쥬", "explain": "설명", "img": "anzyu.png"},
+            "BEF": {"member": "키라 츠바사", "explain": "설명", "img": "tsubasa.png"},
+            "BEG": {"member": "호시조라 린", "explain": "설명", "img": "rin.png"}
         } 
         function start() {
             $(".start").hide();
             $(".question").show();
             next();
         }
-        $("#A").click(function() {
-            var type = ($("#type").val());
-            var preValue = $("#"+type).val();
-            $("#"+type).val(parseInt(preValue)+1);
+        $("#btnA").click(function() {
+            var select = ($("#selectA").val());
+            var preValue = $("#"+select).val();
+            $("#"+select).val(parseInt(preValue)+1);
             next();
         });
-        $("#B").click(function() {
-            var type = ($("#type").val());
-            var preValue = $("#"+type).val();
-            $("#"+type).val(parseInt(preValue)+1);
+        $("#btnB").click(function() {
+            var select = ($("#selectB").val());
+            var preValue = $("#"+select).val();
+            $("#"+select).val(parseInt(preValue)+1);
             next();
-        })
-        $("#C").click(function() {
-            next();
-        })
+        });
         function next() {
-            if (num == 9) {
+            if (num == 10) {
                 $(".question").hide();
                 $(".result").show();
-                var resultS = "";
-                ($("#EI").val() < 2) ? mbti+="I" : mbti+="E";
-                ($("#SN").val() < 2) ? mbti+="N" : mbti+="S";
-                ($("#TF").val() < 2) ? mbti+="F" : mbti+="T";
-                ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
-                $("#img").attr("src", result[mbti]["img"]);
-                $("#member").html(result[mbti]["member"]);
-                $("#explain").html(result[mbti]["explain"]);
+                var reVal="";
+                if ($("#A").val() > 1){
+                    reVal+="A";
+                }
+                if ($("#B").val() > 1){
+                    reVal+="B";
+                }
+                if ($("#C").val() == 3){
+                    reVal+="C";
+                }
+                if ($("#D").val() == 2){
+                    reVal+="D";
+                }
+                if ($("#E").val() == 1){
+                    reVal+="E";
+                }
+                if ($("#F").val() > 1){
+                    reVal+="F";
+                }
+                if ($("#G").val() > 1){
+                    reVal+="G";
+                }
+                $("#resultImg").attr("src", result[reVal]["img"]);
+                $("#member").html(result[reVal]["member"]);
+                $("#explain").html(result[reVal]["explain"]);
             } else {
-                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+                $(".progress-bar").attr('style','width: calc(100/9*'+num+'%)');
                 $("#title").html(q[num]["title"]);
-                $("#type").val(q[num]["type"]);
-                $("#A").html(q[num]["A"]);
-                $("#B").html(q[num]["B"]);
+                $("#btnA").html(q[num]["A"]);
+                $("#btnB").html(q[num]["B"]);
+                $("#selectA").val(q[num]["selA"]);
+                $("#selectB").val(q[num]["selB"]);
                 num++;
             }
         }
