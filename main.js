@@ -1,4 +1,6 @@
-var num = 1;
+var num=1;
+var reVal="";
+var lang="";
 var q = {
     1: {"title": "냥냥멍멍뺙뺙", "A": "1선택지", "B": "2선택지", "selA": "A", "selB": "B"},
     2: {"title": "문제 2번", "A": "2선택지", "B": "2선택지", "selA": "B", "selB": "A"},
@@ -25,7 +27,8 @@ var result = {
     "BEG": {"member": "호시조라 린", "explain": "설명", "img": "rin.png"}
 }
 window.onload=function () {
-    setLanguage(navigator.language);
+    lang=navigator.language;
+    setLanguage(lang);
 }
 function start() {
     $(".start").hide();
@@ -48,7 +51,6 @@ function next() {
     if (num == 10) {
         $(".question").hide();
         $(".result").show();
-        var reVal="";
         if ($("#A").val() > 1){
             reVal+="A";
         }
@@ -96,19 +98,25 @@ $.lang.ko = {
     6: '선택1',
     7: '선택2'
 };
-
 $.lang.en = {
     0: 'Who is like me?',
 	1: 'Lovelive member who looks like me',
 	2: 'Start',
-	3: 'Fire~!!'
+	3: 'name',
+    4: 'info',
+    5: 'question',
+    6: 'select1',
+    7: 'select2'
 };
-	
 $.lang.ja = {
     0: '僕と似ているメンバーは誰？',
 	1: '僕と似ているメンバー',
 	2: 'テストを始める',
-	3: 'ガンバレ~!!'
+	3: '名前',
+    4: '説明',
+    5: '問題',
+    6: '選択１',
+    7: '選択２'
 };
 function setLanguage(currentLanguage) {
     $('[data-langNum]').each(function() {
@@ -116,7 +124,15 @@ function setLanguage(currentLanguage) {
         $this.html($.lang[currentLanguage][$this.data('langnum')]);
     });
 }
-$('button').click(function() {
-    var lang = $(this).data('lang');
+$("#lang1").click(function() {
+    lang = $(this).data('lang');
+    setLanguage(lang);
+});
+$("#lang2").click(function() {
+    lang = $(this).data('lang');
+    setLanguage(lang);
+});
+$("#lang3").click(function() {
+    lang = $(this).data('lang');
     setLanguage(lang);
 });
