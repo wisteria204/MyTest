@@ -1,8 +1,3 @@
-article {
-    display: flex;
-    flex-direction: column;
-}
-
 #titleImg {
     width: 80%;
     margin: 0 auto;
@@ -14,7 +9,7 @@ article {
 }
 
 #resultImg {
-    width: 30%;
+    width: 250px;
     margin: 0 auto;
 }
 
@@ -28,4 +23,16 @@ article {
 
 .share {
     margin: 0 auto;
+}
+
+.Clickmon {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
 }
