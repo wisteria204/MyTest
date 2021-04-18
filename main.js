@@ -23,7 +23,10 @@ var result = {
     "BDG": {"member": "유우키 안쥬", "explain": "설명", "img": "anzyu.png"},
     "BEF": {"member": "키라 츠바사", "explain": "설명", "img": "tsubasa.png"},
     "BEG": {"member": "호시조라 린", "explain": "설명", "img": "rin.png"}
-} 
+}
+window.onload=function () {
+    setLanguage(navigator.language);
+}
 function start() {
     $(".start").hide();
     $(".question").show();
@@ -82,3 +85,38 @@ function next() {
         num++;
     }
 }
+$.lang = {};
+$.lang.ko = {
+    0: '나와 닮은 러브라이브 멤버는?',
+	1: '나와 닮은 뮤즈/아라이즈 멤버',
+	2: '테스트 시작하기',
+	3: '이름',
+    4: '설명',
+    5: '문제',
+    6: '선택1',
+    7: '선택2'
+};
+
+$.lang.en = {
+    0: 'Who is like me?',
+	1: 'Lovelive member who looks like me',
+	2: 'Start',
+	3: 'Fire~!!'
+};
+	
+$.lang.ja = {
+    0: '僕と似ているメンバーは誰？',
+	1: '僕と似ているメンバー',
+	2: 'テストを始める',
+	3: 'ガンバレ~!!'
+};
+function setLanguage(currentLanguage) {
+    $('[data-langNum]').each(function() {
+        var $this = $(this);
+        $this.html($.lang[currentLanguage][$this.data('langnum')]);
+    });
+}
+$('button').click(function() {
+    var lang = $(this).data('lang');
+    setLanguage(lang);
+});

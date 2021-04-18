@@ -13,6 +13,10 @@
     margin: 0 auto;
 }
 
+.language {
+    margin-top: 10px;
+}
+
 .question {
     display: none;
 }
