@@ -53,7 +53,7 @@ var resultEng = {
     "ACG": {"member": "ㅇ니시키노 마키", "explain": "설명", "img": "maki.png"},
     "ADF": {"member": "ㅇ야자와 니코", "explain": "설명", "img": "nico.png"},
     "ADG": {"member": "ㅇ코이즈미 하나요", "explain": "설명", "img": "hanayo.png"},
-    "AEF": {"member": "ㅇ토죠 노조미", "explain": "설명", "img": "nozomi.png"},
+    "AEF": {"member": "希", "explain": "설명", "img": "nozomi.png"},
     "AEG": {"member": "ㅇ토도 에레나", "explain": "설명", "img": "erena.png"},
     "BCF": {"member": "ㅇ미나미 코토리", "explain": "설명", "img": "kotori.png"},
     "BCG": {"member": "ㅇ코우사카 호노카", "explain": "설명", "img": "honoka.png"},
