@@ -1,4 +1,4 @@
-var num=1;
+var num=0;
 var reVal="";
 var lang="";
 var qKor = {
@@ -129,9 +129,9 @@ function next() {
         }
         chgtextRe();
     } else {
+        num++;
         $(".progress-bar").attr('style','width: calc(100/9*'+num+'%)');
         chgtext();
-        num++;
     }
 }
 function chgtext(){
