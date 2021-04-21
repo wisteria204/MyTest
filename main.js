@@ -49,32 +49,32 @@ var resultKor = {
     "BEG": {"member": "호시조라 린", "explain": "설명", "img": "rin.png"}
 }
 var resultEng = {
-    "ACF": {"member": "ㅇ소노다 우미", "explain": "설명", "img": "umi.png"},
-    "ACG": {"member": "ㅇ니시키노 마키", "explain": "설명", "img": "maki.png"},
-    "ADF": {"member": "ㅇ야자와 니코", "explain": "설명", "img": "nico.png"},
-    "ADG": {"member": "ㅇ코이즈미 하나요", "explain": "설명", "img": "hanayo.png"},
-    "AEF": {"member": "希", "explain": "설명", "img": "nozomi.png"},
-    "AEG": {"member": "ㅇ토도 에레나", "explain": "설명", "img": "erena.png"},
-    "BCF": {"member": "ㅇ미나미 코토리", "explain": "설명", "img": "kotori.png"},
-    "BCG": {"member": "ㅇ코우사카 호노카", "explain": "설명", "img": "honoka.png"},
-    "BDF": {"member": "ㅇ아야세 에리", "explain": "설명", "img": "eri.png"},
-    "BDG": {"member": "ㅇ유우키 안쥬", "explain": "설명", "img": "anzyu.png"},
-    "BEF": {"member": "ㅇ키라 츠바사", "explain": "설명", "img": "tsubasa.png"},
-    "BEG": {"member": "ㅇ호시조라 린", "explain": "설명", "img": "rin.png"}
+    "ACF": {"member": "SONODA UMI", "explain": "설명", "img": "umi.png"},
+    "ACG": {"member": "NISHIKINO MAKI", "explain": "설명", "img": "maki.png"},
+    "ADF": {"member": "YAZAWA NICO", "explain": "설명", "img": "nico.png"},
+    "ADG": {"member": "KOIZUMI HANAYO", "explain": "설명", "img": "hanayo.png"},
+    "AEF": {"member": "TOJO NOZOMI", "explain": "설명", "img": "nozomi.png"},
+    "AEG": {"member": "TODOERENA", "explain": "설명", "img": "erena.png"},
+    "BCF": {"member": "MINAMI KOTORI", "explain": "설명", "img": "kotori.png"},
+    "BCG": {"member": "KOSAKA HONOKA", "explain": "설명", "img": "honoka.png"},
+    "BDF": {"member": "AYASE ELI", "explain": "설명", "img": "eri.png"},
+    "BDG": {"member": "YUKI ANJU", "explain": "설명", "img": "anzyu.png"},
+    "BEF": {"member": "KIRA TSUBASA", "explain": "설명", "img": "tsubasa.png"},
+    "BEG": {"member": "HOSHIZORA RIN", "explain": "설명", "img": "rin.png"}
 }
 var resultJap = {
-    "ACF": {"member": "ㅂ소노다 우미", "explain": "설명", "img": "umi.png"},
-    "ACG": {"member": "ㅂ니시키노 마키", "explain": "설명", "img": "maki.png"},
-    "ADF": {"member": "ㅂ야자와 니코", "explain": "설명", "img": "nico.png"},
-    "ADG": {"member": "ㅂ코이즈미 하나요", "explain": "설명", "img": "hanayo.png"},
-    "AEF": {"member": "ㅂ토죠 노조미", "explain": "설명", "img": "nozomi.png"},
-    "AEG": {"member": "ㅂ토도 에레나", "explain": "설명", "img": "erena.png"},
-    "BCF": {"member": "ㅂ미나미 코토리", "explain": "설명", "img": "kotori.png"},
-    "BCG": {"member": "ㅂ코우사카 호노카", "explain": "설명", "img": "honoka.png"},
-    "BDF": {"member": "ㅂ아야세 에리", "explain": "설명", "img": "eri.png"},
-    "BDG": {"member": "ㅂ유우키 안쥬", "explain": "설명", "img": "anzyu.png"},
-    "BEF": {"member": "ㅂ키라 츠바사", "explain": "설명", "img": "tsubasa.png"},
-    "BEG": {"member": "ㅂ호시조라 린", "explain": "설명", "img": "rin.png"}
+    "ACF": {"member": "園田 海未", "explain": "설명", "img": "umi.png"},
+    "ACG": {"member": "西木野 真姫", "explain": "설명", "img": "maki.png"},
+    "ADF": {"member": "矢澤 にこ", "explain": "설명", "img": "nico.png"},
+    "ADG": {"member": "小泉 花陽", "explain": "설명", "img": "hanayo.png"},
+    "AEF": {"member": "東條 希", "explain": "설명", "img": "nozomi.png"},
+    "AEG": {"member": "統堂英玲奈", "explain": "설명", "img": "erena.png"},
+    "BCF": {"member": "南 ことり", "explain": "설명", "img": "kotori.png"},
+    "BCG": {"member": "高坂 穂乃果", "explain": "설명", "img": "honoka.png"},
+    "BDF": {"member": "絢瀬 絵里", "explain": "설명", "img": "eri.png"},
+    "BDG": {"member": "優木あんじゅ", "explain": "설명", "img": "anzyu.png"},
+    "BEF": {"member": "綺羅ツバサ", "explain": "설명", "img": "tsubasa.png"},
+    "BEG": {"member": "星空 凛", "explain": "설명", "img": "rin.png"}
 }
 window.onload=function () {
     lang=navigator.language;
