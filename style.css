@@ -41,8 +41,11 @@
     display: inline-block;
 }
 
+.container {
+    overflow-x: hidden;
+}
+
 article {
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
 }
