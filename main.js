@@ -79,6 +79,7 @@ var resultJap = {
 window.onload=function () {
     lang=navigator.language;
     setLanguage(lang);
+    chgtext();
 }
 function start() {
     $(".start").hide();
