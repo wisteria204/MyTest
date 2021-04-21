@@ -1,6 +1,7 @@
 var num=0;
 var reVal="";
 var lang="";
+var filter = "win16|win32|win64|mac|macintel";
 var qKor = {
     1: {"title": "문제 1번", "A": "1선택지", "B": "2선택지", "selA": "A", "selB": "B"},
     2: {"title": "문제 2번", "A": "2선택지", "B": "2선택지", "selA": "B", "selB": "A"},
@@ -77,8 +78,15 @@ var resultJap = {
     "BEG": {"member": "星空 凛", "explain": "설명", "img": "rin.png"}
 }
 window.onload=function () {
-    lang=navigator.language;
-    setLanguage(lang);
+    if ( navigator.platform ) { 
+        if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ){
+            
+        }
+        else{
+            lang=navigator.language;
+            setLanguage(lang);
+        }
+    }
     chgtext();
 }
 function start() {
