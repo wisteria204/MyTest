@@ -182,6 +182,35 @@ function chgtextRe(){
         $("#explain").html(resultJap[reVal]["explain"]);
     }
 }
+function shareTwitter() {
+    var sendText = "나와 닮은 뮤즈 멤버는?"; // 전달할 텍스트
+    var sendUrl = "https://lovelivetest.netlify.app"; // 전달할 URL
+    window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
+}
+function shareFacebook() {
+    var sendUrl = "https://lovelivetest.netlify.app"; // 전달할 URL
+    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+}
+function shareKakao() {
+ 
+    // 사용할 앱의 JavaScript 키 설정
+    Kakao.init('66ff43d769058ad706fdf239e72f3d3b');
+   
+    // 카카오링크 버튼 생성
+    Kakao.Link.createDefaultButton({
+      container: '#btnKakao', // 카카오공유버튼ID
+      objectType: 'feed',
+      content: {
+        title: "러브라이브 테스트", // 보여질 제목
+        description: "나와 닮은 뮤즈 멤버는?", // 보여질 설명
+        imageUrl: "https://lovelivetest.netlify.app", // 콘텐츠 URL
+        link: {
+           mobileWebUrl: "https://lovelivetest.netlify.app",
+           webUrl: "https://lovelivetest.netlify.app"
+        }
+      }
+    });
+  }
 $.lang = {};
 $.lang.ko = {
     0: '나와 닮은 러브라이브 멤버는?',
